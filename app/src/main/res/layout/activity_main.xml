@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/teal_00">
+
+    <TextView
+        android:id="@+id/TotalQuestions"
+        android:layout_width="350dp"
+        android:layout_height="56dp"
+       android:text="Sabaq Diary"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <EditText
+        android:id="@+id/Student_Name"
+        android:layout_width="253dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="172dp"
+        android:hint="Enter Student Name"
+        android:inputType="number"
+        android:shadowColor="@android:color/background_dark"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Sabaq_Para"
+        android:layout_width="253dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:hint="Sabaq Para"
+        android:inputType="number"
+        android:shadowColor="@android:color/background_dark"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Student_Name" />
+
+    <EditText
+        android:id="@+id/Manzil_Para"
+        android:layout_width="253dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="76dp"
+        android:hint="Manzil Para"
+        android:inputType="number"
+        android:shadowColor="@android:color/background_dark"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sabaqii_Para" />
+
+    <EditText
+        android:id="@+id/sabaqii_Para"
+        android:layout_width="253dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="80dp"
+        android:hint="Sabaqii Para"
+        android:inputType="number"
+        android:shadowColor="@android:color/background_dark"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
+
+    <EditText
+        android:id="@+id/sabaqii_Para2"
+        android:layout_width="253dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="80dp"
+        android:hint="Sabaqii Para"
+        android:inputType="number"
+        android:shadowColor="@android:color/background_dark"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
+
+    <RadioButton
+        android:id="@+id/sabaqYes"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:hint="Yes"
+        app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
+
+    <RadioButton
+        android:id="@+id/sabaqiiYes"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:hint="Yes"
+        app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sabaqii_Para" />
+
+    <RadioButton
+        android:id="@+id/ManzilYes"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:hint="Yes"
+        app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Manzil_Para" />
+
+    <RadioButton
+        android:id="@+id/manzilNo"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="68dp"
+        android:hint="No"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/ManzilYes" />
+
+    <RadioButton
+        android:id="@+id/sabaqiiNo"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="68dp"
+        android:hint="No"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sabaqiiYes" />
+
+    <RadioButton
+        android:id="@+id/sabaqNo"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="72dp"
+        android:hint="No"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sabaqYes" />
+
+    <Button
+        android:id="@+id/Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="36dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Commits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="44dp"
+        android:text="Commit"
+        app:layout_constraintBottom_toBottomOf="@+id/show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/show" />
+
+    <Button
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        app:layout_constraintBottom_toBottomOf="@+id/Save"
+        app:layout_constraintEnd_toStartOf="@+id/Commits"
+        app:layout_constraintStart_toEndOf="@+id/Save"
+        app:layout_constraintTop_toTopOf="@+id/Save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

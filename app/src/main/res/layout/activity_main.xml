@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/teal_00">
+    android:background="#018A7D">
 
     <TextView
         android:id="@+id/TotalQuestions"
@@ -13,7 +13,7 @@
         android:layout_height="56dp"
        android:text="Sabaq Diary"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="172dp"
         android:hint="Enter Student Name"
-        android:inputType="number"
-        android:shadowColor="@android:color/background_dark"
-        android:textColor="@android:color/background_dark"
-        android:textColorLink="@android:color/background_dark"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +41,6 @@
         android:layout_marginTop="28dp"
         android:hint="Sabaq Para"
         android:inputType="number"
-        android:shadowColor="@android:color/background_dark"
-        android:textColor="@android:color/background_dark"
-        android:textColorLink="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +53,6 @@
         android:layout_marginTop="76dp"
         android:hint="Manzil Para"
         android:inputType="number"
-        android:shadowColor="@android:color/background_dark"
-        android:textColor="@android:color/background_dark"
-        android:textColorLink="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,89 +65,113 @@
         android:layout_marginTop="80dp"
         android:hint="Sabaqii Para"
         android:inputType="number"
-        android:shadowColor="@android:color/background_dark"
-        android:textColor="@android:color/background_dark"
-        android:textColorLink="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
 
-    <EditText
-        android:id="@+id/sabaqii_Para2"
-        android:layout_width="253dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="80dp"
-        android:hint="Sabaqii Para"
-        android:inputType="number"
-        android:shadowColor="@android:color/background_dark"
-        android:textColor="@android:color/background_dark"
-        android:textColorLink="@android:color/background_dark"
+    <RadioGroup
+        android:id="@+id/radioGroupSabaq"
+        android:layout_width="190dp"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
+        app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para">
 
-    <RadioButton
-        android:id="@+id/sabaqYes"
-        android:layout_width="55dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="20dp"
-        android:hint="Yes"
-        app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
+        <RadioButton
+            android:id="@+id/sabaqYes"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:hint="Yes"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
 
-    <RadioButton
-        android:id="@+id/sabaqiiYes"
-        android:layout_width="55dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="16dp"
-        android:hint="Yes"
-        app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sabaqii_Para" />
+        <RadioButton
+            android:id="@+id/sabaqNo"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:hint="No"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sabaqYes" />
 
-    <RadioButton
-        android:id="@+id/ManzilYes"
-        android:layout_width="55dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="20dp"
-        android:hint="Yes"
-        app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Manzil_Para" />
+    </RadioGroup>
 
-    <RadioButton
-        android:id="@+id/manzilNo"
-        android:layout_width="55dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="68dp"
-        android:hint="No"
+
+    <RadioGroup
+        android:id="@+id/radioGroupSabqi"
+        android:layout_width="190dp"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sabaqii_Para">
 
-        app:layout_constraintTop_toTopOf="@+id/ManzilYes" />
+        <RadioButton
+            android:id="@+id/sabaqiiYes"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:hint="Yes"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
 
-    <RadioButton
-        android:id="@+id/sabaqiiNo"
-        android:layout_width="55dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="68dp"
-        android:hint="No"
+        <RadioButton
+            android:id="@+id/sabaqiiNo"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:hint="No"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sabaqYes" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupManzil"
+        android:layout_width="190dp"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sabaqiiYes" />
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Manzil_Para">
 
-    <RadioButton
-        android:id="@+id/sabaqNo"
-        android:layout_width="55dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="72dp"
-        android:hint="No"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sabaqYes" />
+        <RadioButton
+            android:id="@+id/ManzilYes"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:hint="Yes"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/sabaqNo"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sabaq_Para" />
+
+        <RadioButton
+            android:id="@+id/ManzilNo"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:hint="No"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sabaqYes" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/Save"

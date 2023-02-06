@@ -40,30 +40,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroupManzil = (RadioGroup) findViewById(R.id.radioGroupManzil);
 
 
-        if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.sabaqYes)
-        {
-            sabaqStatus = "Yes";
-        }
-        if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.sabaqNo)
-        {
-            sabaqStatus ="No";
-        }
-        if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.sabaqiiYes)
-        {
-            sabaqiiStatus = "Yes";
-        }
-        if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.sabaqiiNo)
-        {
-            sabaqiiStatus ="No";
-        }
-        if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.ManzilYes)
-        {
-            manzilStatus = "Yes";
-        }
-        if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.ManzilNo)
-        {
-            manzilStatus ="No";
-        }
+
         db = new DbHelper(this);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +56,31 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please fill the above info..", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                SabaqDiary s = new SabaqDiary(student, sabaq, sabaqStatus,sabaqii, sabaqiiStatus, manzil, manzilStatus, date);
+                if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.sabaqYes)
+                {
+                    sabaqStatus = "Yes";
+                }
+                if (radioGroupSabaq.getCheckedRadioButtonId() == R.id.sabaqNo)
+                {
+                    sabaqStatus ="No";
+                }
+                if (radioGroupSabaqii.getCheckedRadioButtonId() == R.id.sabaqiiYes)
+                {
+                    sabaqiiStatus = "Yes";
+                }
+                if (radioGroupSabaqii.getCheckedRadioButtonId() == R.id.sabaqiiNo)
+                {
+                    sabaqiiStatus ="No";
+                }
+                if (radioGroupManzil.getCheckedRadioButtonId() == R.id.ManzilYes)
+                {
+                    manzilStatus = "Yes";
+                }
+                if (radioGroupManzil.getCheckedRadioButtonId() == R.id.ManzilNo)
+                {
+                    manzilStatus ="No";
+                }
+                SabaqDiary s = new SabaqDiary(student, sabaq, sabaqStatus, sabaqii, sabaqiiStatus, manzil, manzilStatus, date);
                 db.saveData(s);
                 Toast.makeText(MainActivity.this, "Save Successfully!", Toast.LENGTH_SHORT).show();
             }
